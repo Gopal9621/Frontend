@@ -1,155 +1,261 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Gopal Verma - Resume</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gopal - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --bg-color: #f4f6f8;
+      --text-color: #2c3e50;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: var(--secondary-color);
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+    }
+
+    h1 {
+      margin: 1rem 0 0.3rem;
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+
+    /* Resume Button */
+    .resume-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: white;
+      color: var(--secondary-color);
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .resume-btn:hover {
+      background: var(--secondary-color);
+      color: white;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+      border-left: 5px solid var(--secondary-color);
+      padding-left: 10px;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Education */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: var(--secondary-color);
+      color: white;
+    }
+    tr:hover {
+      background: #f1f1f1;
+    }
+
+    /* Skills */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+    .skill:hover {
+      background-color: var(--primary-color);
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+    .contact-info a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #eaeaea;
+      font-size: 0.9rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
 
-   
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <img src="https://github.com/Gopal9621/Frontend/blob/main/FRONTEND/HTML/ASSIGNMENT/profile%20photo.jpeg?raw=true" alt="Profile Photo" class="profile-photo">
     <h1>Gopal Verma</h1>
-    <h3> Full Stack Developer</h3>
-    <img src="https://github.com/Gopal9621/Frontend/blob/main/FRONTEND/HTML/ASSIGNMENT/profile%20photo.jpeg?raw=true" style="width:150px; height:150px; ">
+    <h2>Web Developer | Software Engineer | UI/UX Designer</h2>
+    <!-- <a href="resume.pdf" class="resume-btn" target="_blank">Download Resume</a> -->
+  </header>
 
+  <!-- Main Content -->
+  <div class="container">
 
-    <h3>Contact Information</h3>
-    <ul>
-        <li>Email: xyz@gmail.com</li>
-        <li>Phone: +91-9621601975</li>
-        <li>https://www.linkedin.com/feed/</li>
-    </ul>
+    <section id="about">
+      <div class="section-title">About Me</div>
+      <p>Hello! I'm a passionate web developer with experience in creating dynamic and responsive web applications. I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
+    </section>
 
-    
-    <h3>About Me</h3>
-    <p>
-        Hello! My name is <b>Gopal Verma</b> and I am a web developer.
-        I love <u>building full stack applications</u>.
-    </p>
-
-    
-    <h3>Education</h3>
-    <table style="border:1px solid black;  ">
-        <thead>
-            <tr>
-            <th style="border:1px solid black; padding:8px;">Year</th>
-            <th style="border:1px solid black; padding:8px;">Degree</th>
-            <th style="border:1px solid black; padding:8px;">Institute</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td style="border:1px solid black; padding:8px;">2021-2025</td>
-            <td style="border:1px solid black; padding:8px;">B.Tech in CSE</td>
-            <td style="border:1px solid black; padding:8px;">GLA University</td>
+    <!-- Education Section -->
+    <section id="education">
+      <div class="section-title">Education</div>
+      <table>
+        <tr>
+          <th>Degree</th>
+          <th>Institution</th>
+          <th>Year</th>
+          <th>Grade/CGPA</th>
         </tr>
         <tr>
-            <td style="border:1px solid black; padding:8px;">2019-2021</td>
-            <td style="border:1px solid black; padding:8px;">Senior Secondary</td>
-            <td style="border:1px solid black; padding:8px;">XYZ School</td>
-        </tr>
-        </tbody>
-    </table>
-
-    
-    <h3>Skills</h3>
-    <ul>
-        <li>HTML / CSS</li>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>C programming</li>
-    </ul>
-
-    
-   
-    <h3>Hobbies</h3>
-    <ul>
-        <li>Tradding </li>
-  
-        <li> Listening to Music</li>
-    </ul>
-
-   
-    <footer>
-        &copy; 2025 Gopal Verma
-    </footer>
-
-</body>
-</html> -->
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Gopal Verma - Resume</title>
-</head>
-<body>
-
-   
-    <h1>Gopal Verma</h1>
-    <h3> Full Stack Developer</h3>
-    <img src="https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg" alt="Profile Picture" style="width:150px; height:150px; ">
-
-
-    <h3>Contact Information</h3>
-    <ul>
-        <li>Email: xyz@gmail.com</li>
-        <li>Phone: +91-9621601975</li>
-        <li>https://www.linkedin.com/feed/</li>
-    </ul>
-
-    
-    <h3>About Me</h3>
-    <p>
-        Hello! My name is <b>Gopal Verma</b> and I am a web developer.
-        I love <u>building full stack applications</u>.
-    </p>
-
-    
-    <h3>Education</h3>
-    <table style="border:1px solid black;  ">
-        <thead>
-            <tr>
-            <th style="border:1px solid black; padding:8px;">Year</th>
-            <th style="border:1px solid black; padding:8px;">Degree</th>
-            <th style="border:1px solid black; padding:8px;">Institute</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td style="border:1px solid black; padding:8px;">2021-2025</td>
-            <td style="border:1px solid black; padding:8px;">B.Tech in CSE</td>
-            <td style="border:1px solid black; padding:8px;">GLA University</td>
+          <td>B.Tech in Computer Science</td>
+          <td>GLA University</td>
+          <td>2024 - 2028</td>
+          <td>8.31 CGPA</td>
         </tr>
         <tr>
-            <td style="border:1px solid black; padding:8px;">2019-2021</td>
-            <td style="border:1px solid black; padding:8px;">Senior Secondary</td>
-            <td style="border:1px solid black; padding:8px;">XYZ School</td>
+          <td>Intermediate (12th)</td>
+          <td>J.P Sunrise School</td>
+          <td>2022 - 2024</td>
+          <td>81%</td>
         </tr>
-        </tbody>
-    </table>
+        <tr>
+          <td>High School (10th)</td>
+          <td>Pt. D.D.I.C </td>
+          <td>2020 - 2022</td>
+          <td>89.3%</td>
+        </tr>
+      </table>
+    </section>
 
-    
-    <h3>Skills</h3>
-    <ul>
-        <li>HTML / CSS</li>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>C programming</li>
-    </ul>
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="section-title">Skills</div>
+      <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+        <div class="skill">Git</div>
+        <div class="skill">C Programming</div>
+      </div>
+    </section>
 
-    
-   
-    <h3>Hobbies</h3>
-    <ul>
-        <li>Tradding </li>
-  
-        <li> Listening to Music</li>
-    </ul>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-title">Contact</div>
+      <div class="contact-info">
+       <p><strong>Email:</strong> <a href="mailto:iasgopalverma@gmail.com">iasgopalverma@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn Profile</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Gopal9621" target="_blank">GitHub Profile</a></p>
+      </div>
+    </section>
 
-   
-    <footer>
-        &copy; 2025 Gopal Verma
-    </footer>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Gopal Verma. All rights reserved.
+  </footer>
 
 </body>
-
 </html>
+
