@@ -1,0 +1,21 @@
+body{
+    font-family:Arial;
+    padding:20px
+}
+button{
+    margin:5px;
+    padding:6px 12px;
+    cursor:pointer
+}
+#search{
+    padding:6px;
+    width:200px;
+    margin-bottom:10px
+}
+ul{
+    list-style:none;
+    padding:0
+}
+li{
+    padding:5px 0
+}
