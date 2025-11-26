@@ -11,16 +11,14 @@ function setError(input, msg, errBox){
   input.className = "invalid";
   errBox.textContent = msg;
 }
-
 function setSuccess(input, errBox){
   input.className = "valid";
   errBox.textContent = "";
 }
-
 form.addEventListener("submit", e => {
   e.preventDefault();
   let ok = true;
-
+  
   // Name
   if(nameF.value.trim() === ""){
     setError(nameF,"Name is required",nameErr);
@@ -49,3 +47,4 @@ form.addEventListener("submit", e => {
     alert("Registration Successful!");
   }
 });
+
