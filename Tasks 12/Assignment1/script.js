@@ -7,7 +7,6 @@ window.onload = () => {
     let saved = JSON.parse(localStorage.getItem("tasks")) || [];
     saved.forEach(text => addTask(text));
 };
-
 function saveTasks() {
     let tasks = [];
     document.querySelectorAll("#taskList li span").forEach(item => {
@@ -15,14 +14,12 @@ function saveTasks() {
     });
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
-
 addBtn.onclick = () => {
     if (taskInput.value.trim() === "") return;
     addTask(taskInput.value);
     taskInput.value = "";
     saveTasks();
 };
-
 function addTask(text) {
     let li = document.createElement("li");
 
@@ -49,3 +46,4 @@ function addTask(text) {
     li.appendChild(delBtn);
     taskList.appendChild(li);
 }
+
